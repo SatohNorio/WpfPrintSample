@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfPrintSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfPrintSample"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="MainWindow"
+        Width="525" Height="350" mc:Ignorable="d">
+    <Grid>
+        <Button x:Name="button" Margin="10,10,0,0" HorizontalAlignment="Left"
+                VerticalAlignment="Top" Click="buttonClick" Content="Print Dialogから印刷"
+                Padding="5" />
+        <local:SampleReport Width="330" Margin="10,43,0,0" HorizontalAlignment="Left"
+                            VerticalAlignment="Top" />
+        <Button x:Name="button_Copy" Margin="132,10,0,0" HorizontalAlignment="Left"
+                VerticalAlignment="Top" Click="xpsPrintButtonClick" Content="XpsDocumentWriterから印刷"
+                Padding="5" />
+    </Grid>
+</Window>

@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="WpfPrintSample.SampleReport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfPrintSample"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xml:lang="ja-JP"
+             mc:Ignorable="d">
+    <Grid>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" HeadersVisibility="Column"
+                  ItemsSource="{Binding List}">
+            <DataGrid.DataContext>
+                <local:ReportSample />
+            </DataGrid.DataContext>
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
+                                   VerticalContentAlignment="Center" Content="名字" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock x:Name="DataText" HorizontalAlignment="Center" Padding="5,2"
+                                           ScrollViewer.CanContentScroll="True"
+                                           Text="{Binding FamilyName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
+                                   VerticalContentAlignment="Center" Content="名前" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock x:Name="DataText" HorizontalAlignment="Center" Padding="5,2"
+                                           ScrollViewer.CanContentScroll="True"
+                                           Text="{Binding FirstName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
+                                   VerticalContentAlignment="Center" Content="年齢" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <TextBlock x:Name="DataText" HorizontalAlignment="Center" Padding="5,2"
+                                           ScrollViewer.CanContentScroll="True"
+                                           Text="{Binding Age}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
+                                   VerticalContentAlignment="Center" Content="生年月日" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <TextBlock x:Name="DataText" HorizontalAlignment="Center" Padding="5,2"
+                                           ScrollViewer.CanContentScroll="True"
+                                           Text="{Binding BirthDay,
+                                                          StringFormat=\{0:D\},
+                                                          ConverterCulture=ja-JP}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
