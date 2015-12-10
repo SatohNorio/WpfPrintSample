@@ -17,7 +17,7 @@
                     <DataGridTemplateColumn.HeaderTemplate>
                         <DataTemplate>
                             <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
-                                   VerticalContentAlignment="Center" Content="名字" />
+                                   VerticalContentAlignment="Center" Content="名字" FontFamily="Meiryo UI" />
                         </DataTemplate>
                     </DataGridTemplateColumn.HeaderTemplate>
                     <DataGridTemplateColumn.CellTemplate>
@@ -25,7 +25,7 @@
                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <TextBlock x:Name="DataText" HorizontalAlignment="Center" Padding="5,2"
                                            ScrollViewer.CanContentScroll="True"
-                                           Text="{Binding FamilyName}" />
+                                           Text="{Binding FamilyName}" FontFamily="Meiryo UI" />
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -35,7 +35,7 @@
                     <DataGridTemplateColumn.HeaderTemplate>
                         <DataTemplate>
                             <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
-                                   VerticalContentAlignment="Center" Content="名前" />
+                                   VerticalContentAlignment="Center" Content="名前" FontFamily="Meiryo UI" />
                         </DataTemplate>
                     </DataGridTemplateColumn.HeaderTemplate>
                     <DataGridTemplateColumn.CellTemplate>
@@ -43,7 +43,7 @@
                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <TextBlock x:Name="DataText" HorizontalAlignment="Center" Padding="5,2"
                                            ScrollViewer.CanContentScroll="True"
-                                           Text="{Binding FirstName}" />
+                                           Text="{Binding FirstName}" FontFamily="Meiryo UI" />
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -53,7 +53,7 @@
                     <DataGridTemplateColumn.HeaderTemplate>
                         <DataTemplate>
                             <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
-                                   VerticalContentAlignment="Center" Content="年齢" />
+                                   VerticalContentAlignment="Center" Content="年齢" FontFamily="Meiryo UI" />
                         </DataTemplate>
                     </DataGridTemplateColumn.HeaderTemplate>
                     <DataGridTemplateColumn.CellTemplate>
@@ -61,7 +61,7 @@
                             <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
                                 <TextBlock x:Name="DataText" HorizontalAlignment="Center" Padding="5,2"
                                            ScrollViewer.CanContentScroll="True"
-                                           Text="{Binding Age}" />
+                                           Text="{Binding Age}" FontFamily="Meiryo UI" />
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -71,7 +71,7 @@
                     <DataGridTemplateColumn.HeaderTemplate>
                         <DataTemplate>
                             <Label x:Name="HeaderLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
-                                   VerticalContentAlignment="Center" Content="生年月日" />
+                                   VerticalContentAlignment="Center" Content="生年月日" FontFamily="Meiryo UI" />
                         </DataTemplate>
                     </DataGridTemplateColumn.HeaderTemplate>
                     <DataGridTemplateColumn.CellTemplate>
@@ -81,7 +81,7 @@
                                            ScrollViewer.CanContentScroll="True"
                                            Text="{Binding BirthDay,
                                                           StringFormat=\{0:D\},
-                                                          ConverterCulture=ja-JP}" />
+                                                          ConverterCulture=ja-JP}" FontFamily="Meiryo UI" />
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
